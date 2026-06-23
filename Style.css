@@ -233,3 +233,343 @@ body > div:hover {
         border-radius: 10px;
     }
 }
+
+/* =========================
+   BARRA DE NAVEGAÇÃO INFERIOR
+========================= */
+
+.page-navigation {
+
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: min(90%, 500px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 250, 243, 0.95);
+
+    padding: 12px 18px;
+
+    border-radius: 25px;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.12);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.nav-button {
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    font-size: 2rem;
+    font-weight: bold;
+
+    color: var(--title);
+
+    background: #f1e7d8;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--border);
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+/* botão central */
+
+.menu-button {
+
+    width: 65px;
+    height: 65px;
+
+    font-size: 2.2rem;
+
+    background: var(--title);
+    color: white;
+
+}
+
+
+/* efeito ao passar mouse */
+
+.nav-button:hover {
+
+    transform: translateY(-3px);
+
+    background: #e8dccb;
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,0.15);
+
+}
+
+
+.menu-button:hover {
+
+    background: #244b32;
+
+}
+
+
+/* =========================
+   EVITA ESCONDER TEXTO
+========================= */
+
+body {
+
+    padding-bottom: 120px;
+
+}
+
+
+/* =========================
+   CELULARES
+========================= */
+
+@media(max-width:600px){
+
+    .page-navigation {
+
+        bottom: 12px;
+
+        width: calc(100% - 32px);
+
+        padding: 10px 14px;
+
+    }
+
+
+    .nav-button {
+
+        width:45px;
+        height:45px;
+
+        font-size:1.6rem;
+
+    }
+
+
+    .menu-button {
+
+        width:55px;
+        height:55px;
+
+        font-size:1.8rem;
+
+    }
+
+}
+
+/* =========================
+   CAPA DO EBOOK
+========================= */
+
+
+.ebook-title {
+
+    font-size: 3.5rem;
+
+    color: var(--title);
+
+    letter-spacing: 2px;
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================
+   CRÉDITOS DOS AUTORES
+========================= */
+
+
+.authors-card {
+
+    text-align: center;
+
+    background: #fcf7f1;
+
+}
+
+
+.authors-name {
+
+    margin-bottom: 8px;
+
+    font-size: 1rem;
+
+    color: #6a625a;
+
+}
+
+
+.authors-name:first-child {
+
+    margin-top: 0;
+
+}
+
+
+
+/* =========================
+   SELETOR DE CAPÍTULOS
+========================= */
+
+
+.chapter-selector {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+
+/* =========================
+   BOTÕES DOS CAPÍTULOS
+========================= */
+
+
+.chapter-button {
+
+    min-height: 130px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+
+    text-decoration: none;
+
+
+    background: #fcf7f1;
+
+    color: var(--title);
+
+
+    border-radius: var(--radius);
+
+    border: 1px solid var(--border);
+
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+
+
+    transition:
+
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+
+}
+
+
+
+.chapter-button span {
+
+
+    margin-top: 10px;
+
+
+    font-size: 1rem;
+
+    font-weight: 400;
+
+    color: var(--subtitle);
+
+}
+
+
+
+/* hover */
+
+.chapter-button:hover {
+
+
+    transform: translateY(-5px);
+
+
+    background: #f1e7d8;
+
+
+    box-shadow:
+
+        0 10px 20px rgba(0,0,0,0.08);
+
+}
+
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+
+@media(max-width:700px){
+
+
+    .ebook-title {
+
+        font-size: 2.5rem;
+
+    }
+
+
+    .chapter-selector {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+    }
+
+
+    .chapter-button {
+
+        min-height: 110px;
+
+        font-size: 1.3rem;
+
+    }
+
+}
